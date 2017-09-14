@@ -1,0 +1,35 @@
+module.exports = function(router){
+     router.map({
+     	"/login":{
+     		component: require('views/login')
+     	},
+     	"/index":{
+     		component:require('views/index'),
+     		subRoutes:{
+     		 	'/watch':{
+     		 		component:require('views/watch')
+     		 	},
+     		 	'/':{
+     		 		component:require('views/hot'),
+                         subRoutes:{
+                              '/life':{
+                                   component:require('views/life')
+                              },
+                              '/pretty':{
+                                   component:require('views/pretty')
+                              },
+                              '/':{
+                                   component:require('views/live')
+                              }
+                         }
+     		 	}
+     		}
+     	},
+          "/search":{
+               component:require('views/search')
+          },
+          "/user":{
+               component:require('views/user')
+          }
+     })
+}
