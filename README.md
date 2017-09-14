@@ -1,6 +1,6 @@
 # football
 
-> A Vue.js project
+> A Vue.js project based 1.0
 
 ## Build Setup
 
